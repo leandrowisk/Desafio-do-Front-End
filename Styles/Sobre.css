@@ -1,0 +1,251 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    
+    position: absolute;
+    background-color: whitesmoke;
+    width:100%;
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 40px;
+}
+p{
+    
+    font-size: 20px;
+}
+
+li{
+    list-style-type: none;
+}
+
+ul{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    height: 0;
+    width: 100%;
+    background-image:url("Matthew.jpg");
+    background-size: cover;
+    
+}
+
+a{
+    
+    margin: 30px;
+    text-decoration: none;
+    color:whitesmoke;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+a:hover{
+    transition: 0.5s ease-out;
+    color: rgb(42, 110, 165);
+}
+
+
+
+.container-texto{
+
+    padding:5vw;    
+}
+
+label{
+    
+    
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    
+    
+}
+
+.linha1{
+    
+    background-color: black;
+    height: 5px;
+    width: 25px;
+    margin-top: 15px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    
+}
+
+.linha2{
+
+    background-color: black;
+    height: 5px;
+    width: 25px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    
+}
+
+#botao-menu{
+
+    opacity: 0;
+}
+.linha3{
+    background-color: black;
+    height: 5px;
+    width: 25px;
+    margin-left: 10px;
+}
+
+nav{
+    
+   background-color: white;
+   
+}
+
+/*Trata as transições do botao do menu mobile*/
+
+#botao-menu ~ label .linha1{
+
+    transition: 0.5s ease-in-out;
+    
+}
+
+#botao-menu ~ label .linha2{
+ transition: 0.5s ease-in-out;
+ 
+}
+
+#botao-menu ~ label .linha3{
+
+ transition: 0.5s ease-in-out;
+ 
+}
+
+#botao-menu:enabled ~ ul li a {
+    opacity: 0;
+}
+input[type="checkbox"]:checked ~ label .linha1{
+    
+    
+    position: relative;
+    transform:rotate(45deg);
+    transition: 0.5s ease-in-out;
+    height: 6px;
+    top:3px;
+    
+    
+}
+input[type="checkbox"]:checked ~ label .linha2{
+   
+    position: relative;
+    transform: rotate(-45deg);
+    transition: 0.5s ease-in-out;
+    bottom: 4px;
+    
+}
+
+
+input[type="checkbox"]:checked ~ label .linha3{
+    position: relative;
+    bottom:11px;
+    transition: 0.5s ease-in;
+    transform: rotate(-45deg);
+    
+}
+
+input [type="checkbox"]:checked ~ .links-internos{
+    opacity: 0;
+}
+
+#botao-menu:checked ~ ul{
+
+    transition:  1s ease;
+    height: 300px;
+    opacity: 1;
+}
+
+#botao-menu:enabled ~ ul{
+    transition: 0.5s ease-in-out;
+}
+
+
+#botao-menu:checked ~ ul li a{
+    opacity: 1;
+}
+
+footer{
+   
+   
+    display:block;
+    height: 100%;
+    bottom:0;
+    background-color: rgb(216, 216, 216);;
+    width: 100%;
+   
+    
+}
+
+
+    
+.redes-sociais{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+@media screen and (min-width:768px){
+
+    
+    label{
+        display: none;
+    }
+    input{
+        opacity: 0;
+    }
+
+    #botao-menu:enabled ~ ul li a {
+        opacity: 1;
+    }
+    
+    nav{
+        
+        
+        height: 400px;
+        background-image: url("Interestelar2.jpg" );
+        background-size: cover;
+        
+        
+    }
+
+    nav ul{
+        
+        margin-bottom: 60px;
+        opacity: 1;
+    }
+     ul li{
+        margin-left: 40px;
+    }
+    ul li a{
+        font-size: 35px;
+        color:black;
+    }
+
+    
+
+}
+
